@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
    <welcome-file-list>
-       <welcome-file>index.jsp</welcome-file>
+       <welcome-file>login.jsp</welcome-file>
    </welcome-file-list>
 
     <servlet>
@@ -26,6 +26,29 @@
         <servlet-name>Servlet2</servlet-name>
         <url-pattern>/Calendar</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Servlet3</servlet-name>
+        <servlet-class>org.anzo.AccessPage</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Servlet3</servlet-name>
+        <url-pattern>/result</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Servlet4</servlet-name>
+        <servlet-class>org.anzo.UserAdd</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Servlet4</servlet-name>
+        <url-pattern>/add</url-pattern>
+    </servlet-mapping>
+
+
 
 
 </web-app>

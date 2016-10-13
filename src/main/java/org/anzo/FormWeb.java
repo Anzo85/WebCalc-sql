@@ -32,9 +32,8 @@ public class FormWeb extends HttpServlet {
             z = 000;
         }
         String result = "Result: " + z;
-        response.getWriter().println("<!DOCTYPE HTML>");
-        response.getWriter().println("<html><body style= \"background-color:powderblue;\"><form action=\"http://localhost:9090/web/\"><h1> " + result + "</p></form></body></html>");
-        response.getWriter().println("<input type=\"submit\"value=\"Back\" />");
+        request.setAttribute("test", result );
+        request.getRequestDispatcher("result.jsp").forward(request , response);
     }
 
 
